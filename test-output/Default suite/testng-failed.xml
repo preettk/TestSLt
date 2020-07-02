@@ -6,6 +6,7 @@
       <class name="ShypTest.RegrTest">
         <methods>
           <include name="RegisterPageTest" invocation-numbers="0"/>
+          <include name="closebr"/>
           <include name="launchBr"/>
         </methods>
       </class> <!-- ShypTest.RegrTest -->

@@ -24,12 +24,13 @@ public static Logger log = org.apache.logging.log4j.LogManager.getLogger(base.cl
 	}
 	
 	@Test(dataProvider="getData")
-	public void RegisterPageTest(String name,String email,String password,CharSequence[] contact) throws IOException {
+	public void RegisterPageTest(String name,String email,String password,CharSequence[] contact) throws IOException, InterruptedException {
 		RegisterUser Ru =new RegisterUser(driver);
 		Ru.getName().sendKeys(name);
 		Ru.getEmail().sendKeys(email);
 		Ru.getPassword().sendKeys(password);
 		Ru.getContact().sendKeys(contact);
+		Thread.sleep(3000);
 		Ru.getRegister().click();
 		log.info("Register successful");
 	}
@@ -41,11 +42,11 @@ public static Logger log = org.apache.logging.log4j.LogManager.getLogger(base.cl
 	
 	@DataProvider
 	public Object[][] getData() {
-		Object[][] data = new Object[1][5];
-		data[0][0] ="user1test";  //first set of valid data
+		Object[][] data = new Object[1][4];
+		data[0][0] ="user1 test";  //first set of valid data
 		data[0][1]="validemailaddr@email.com";
 		data[0][2]="password241";
-		data[0][3]="10000000";
+		data[0][3]="10000099";
 		
 		return data;
 	}

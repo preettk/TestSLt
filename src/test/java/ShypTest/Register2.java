@@ -21,7 +21,7 @@ public class Register2 {
 	public static void main(String[] args) throws InterruptedException {
 	System.setProperty("webdriver.chrome.driver", "//Users//harpreetkaur//Desktop//auto//chromedriver");
 	 WebDriver driver = new ChromeDriver();
-		
+		 //direct method 
 	driver.get("https://pitneybowes.shyplite.com/register");	
 	driver.manage().window().maximize();	
 	driver.findElement(By.id("name")).sendKeys("helloo User");
@@ -31,6 +31,7 @@ public class Register2 {
 	driver.findElement(By.xpath("//button[contains(text(),'Register')]")).click();
 	System.out.println("Registered successfully");
 	driver.close();
+	
 	}
 
 	
